@@ -7,9 +7,23 @@ import "bootstrap";
 
 //include your index.scss file into the bundle
 import "../styles/index.scss";
+import "./component/index.css";
 
 //import your own components
-import { Home } from "./component/home.js";
+
+import { NavBar } from "./component/navbar";
+import { Content } from "./component/content.js";
+import { Footer } from "./component/footer.js";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+ReactDOM.render(
+	<div className>
+		<NavBar />
+		<div className="bodyP">
+			<Content />
+		</div>
+		<br />
+		<Footer />
+	</div>,
+	document.querySelector("#app")
+);
